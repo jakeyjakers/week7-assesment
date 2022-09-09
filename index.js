@@ -20,7 +20,7 @@ console.log(addToZero(numsArr))
 
 ////// I bleive the runtime of this code to be O(n^2) because in my limited understanding it is using a nested loop, 
 ////// and the length for it to run should techinally be unknown?
-
+/// space complexity  O(n)
 
 
 
@@ -47,6 +47,7 @@ const hasUniqueChars = (str) => {
 console.log(hasUniqueChars(chars))
 
 ///// I blelieve the runtime to be runtime to be O(n^2)
+//// space complexity O(n)
 
 
 let testPangram = "The quick brown fox jumps over the lazy dog!"  // should be true
@@ -76,6 +77,7 @@ console.log(isPangram(testPangramTwo))
 
 /// I want to say this functions runtime is O(n), in my understanding because it's using a loop where
 /// the end limit is based on the lenght of the string being passed in.
+/// space complexity O(n)
 
 
 let testWords = ['hi', 'hello']
@@ -105,3 +107,4 @@ const findLongestWord = (arr) => {
 console.log(findLongestWord(testWordsTwo))
 
 /// I believe the runtime of this is O(n)
+/// space complexity O(n)
