@@ -1,0 +1,44 @@
+Runtime notes
+
+1. Results for the extraLargeArray
+
+    insert 1.4710482 s
+    append 5.1118 ms
+
+2. Results for the largeArray
+    
+    insert 15.1666 ms
+    append 1.2195 ms
+    
+3. Results for the mediumArray
+
+    insert 333.6 μs
+    append 246 μs
+    
+4. Results for the smallArray
+    
+    insert 82.1 μs
+    append 321.3 μs
+
+5. Results for the tinyArray
+
+    insert 59.4 μs
+    append 245.6 μs
+
+
+I thought this test for runtimes was pretty cool. It was very interesting to get to see exactly how long
+the functions would take, as opposed to working on other stuff when we just ran the function and waited. 
+The two smallest arrays seem to go faster with the insert using unshift, which I find interesting and slightly
+confusing as to why. Then when we get to the mediumArray, the append one, using push goes faster, but just by a 
+hair. After that going even bigger the append one completely blows the unshift function out of the water.
+For very small bits of data, they both do well, but when you start to go bigger the one using push scales much much
+better. We can tell this from the way that the time is put into the console with the runtimes. I believe why the one 
+using push scales better is because the way that push runs vs unshift, push just puts it on the end, and unshift
+makes all of them shift down after being put on the front, thus increasing run time.
+I believe the one using push scales O(n) and the one using unshift scales O(n^2)
+
+Extra credit:
+
+The one using push scales much better because the computer is only doing one operation for push, as 
+opposed to unshift, which does X amount of operations, pushing each number down, for each number going 
+to the front of the array. Thus more numbers, the more time it will take to move everything down one space.
